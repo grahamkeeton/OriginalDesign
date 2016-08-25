@@ -10,7 +10,15 @@ float ki = 255;
 float ka = 255;
 float ke = 255;
 
+
+
 void draw(){
+
+    background(esab);
+    stripes();
+    bluesq();
+    starsarray();
+
 
     if (mousePressed==true){
         base = random(0,255);
@@ -19,13 +27,18 @@ void draw(){
         ki = random(0,255);
         ka = random(0,255);
         ke = random(0,255);
+
+
+        while(0<3){
+            stars();
         }
 
-    background(esab);
-    stripes();
-    bluesq();
-    stars();
-  }
+
+        }
+
+    }            
+
+  
 
 
 void stripes(){
@@ -43,6 +56,24 @@ void bluesq(){
 }
 
 void stars(){
+    int g = mouseX;
+    int k = mouseY;
+    beginShape();
+                    vertex(g,k);
+                    vertex(g+3,k+5);
+                    vertex(g+8,k+4);
+                    vertex(g+3,k+8);
+                    vertex(g+5,k+13);
+                    vertex(g,k+10);
+                    vertex(g-5,k+13);
+                    vertex(g-3,k+8);
+                    vertex(g-8,k+4);
+                    vertex(g-3,k+5);
+                    vertex(g,k);
+            endShape();
+}
+
+void starsarray(){
     for (int x = 20; x<260;x+=45){
         for (int y = 10;y<210;y+=45){
             fill(ki,esab,ka);
