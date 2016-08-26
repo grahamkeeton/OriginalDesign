@@ -29,11 +29,6 @@ void draw(){
         ke = random(0,255);
 
 
-        while(0<3){
-            stars();
-        }
-
-
         }
 
     }            
